@@ -1489,7 +1489,7 @@ export namespace Prisma {
   export type UserGroupByOutputType = {
     id: string
     createdAt: Date
-    updatedAt: Date
+    updatedAt: Date | null
     email: string
     name: string | null
     password: string
@@ -1563,7 +1563,7 @@ export namespace Prisma {
     scalars: $Extensions.GetPayloadResult<{
       id: string
       createdAt: Date
-      updatedAt: Date
+      updatedAt: Date | null
       email: string
       name: string | null
       password: string
@@ -2516,7 +2516,7 @@ export namespace Prisma {
   export type TaskGroupByOutputType = {
     id: string
     createdAt: Date
-    updatedAt: Date
+    updatedAt: Date | null
     name: string
     priority: $Enums.Priority | null
     isCompleted: boolean | null
@@ -2574,7 +2574,7 @@ export namespace Prisma {
     scalars: $Extensions.GetPayloadResult<{
       id: string
       createdAt: Date
-      updatedAt: Date
+      updatedAt: Date | null
       name: string
       priority: $Enums.Priority | null
       isCompleted: boolean | null
@@ -3498,7 +3498,7 @@ export namespace Prisma {
   export type TimeBlockGroupByOutputType = {
     id: string
     createdAt: Date
-    updatedAt: Date
+    updatedAt: Date | null
     name: string
     color: string | null
     duration: number
@@ -3561,7 +3561,7 @@ export namespace Prisma {
     scalars: $Extensions.GetPayloadResult<{
       id: string
       createdAt: Date
-      updatedAt: Date
+      updatedAt: Date | null
       name: string
       color: string | null
       duration: number
@@ -4433,7 +4433,7 @@ export namespace Prisma {
   export type PomodoroSessionGroupByOutputType = {
     id: string
     createdAt: Date
-    updatedAt: Date
+    updatedAt: Date | null
     isCompleted: boolean | null
     userId: string
     _count: PomodoroSessionCountAggregateOutputType | null
@@ -4490,7 +4490,7 @@ export namespace Prisma {
     scalars: $Extensions.GetPayloadResult<{
       id: string
       createdAt: Date
-      updatedAt: Date
+      updatedAt: Date | null
       isCompleted: boolean | null
       userId: string
     }, ExtArgs["result"]["pomodoroSession"]>
@@ -5417,7 +5417,7 @@ export namespace Prisma {
   export type PomodoroRoundGroupByOutputType = {
     id: string
     createdAt: Date
-    updatedAt: Date
+    updatedAt: Date | null
     totalSeconds: number
     isCompleted: boolean | null
     pomodoroSessionId: string
@@ -5474,7 +5474,7 @@ export namespace Prisma {
     scalars: $Extensions.GetPayloadResult<{
       id: string
       createdAt: Date
-      updatedAt: Date
+      updatedAt: Date | null
       totalSeconds: number
       isCompleted: boolean | null
       pomodoroSessionId: string
@@ -6400,7 +6400,7 @@ export namespace Prisma {
     NOT?: UserWhereInput | UserWhereInput[]
     id?: StringFilter<"User"> | string
     createdAt?: DateTimeFilter<"User"> | Date | string
-    updatedAt?: DateTimeFilter<"User"> | Date | string
+    updatedAt?: DateTimeNullableFilter<"User"> | Date | string | null
     email?: StringFilter<"User"> | string
     name?: StringNullableFilter<"User"> | string | null
     password?: StringFilter<"User"> | string
@@ -6415,7 +6415,7 @@ export namespace Prisma {
   export type UserOrderByWithRelationInput = {
     id?: SortOrder
     createdAt?: SortOrder
-    updatedAt?: SortOrder
+    updatedAt?: SortOrderInput | SortOrder
     email?: SortOrder
     name?: SortOrderInput | SortOrder
     password?: SortOrder
@@ -6434,7 +6434,7 @@ export namespace Prisma {
     OR?: UserWhereInput[]
     NOT?: UserWhereInput | UserWhereInput[]
     createdAt?: DateTimeFilter<"User"> | Date | string
-    updatedAt?: DateTimeFilter<"User"> | Date | string
+    updatedAt?: DateTimeNullableFilter<"User"> | Date | string | null
     name?: StringNullableFilter<"User"> | string | null
     password?: StringFilter<"User"> | string
     workInterval?: IntNullableFilter<"User"> | number | null
@@ -6448,7 +6448,7 @@ export namespace Prisma {
   export type UserOrderByWithAggregationInput = {
     id?: SortOrder
     createdAt?: SortOrder
-    updatedAt?: SortOrder
+    updatedAt?: SortOrderInput | SortOrder
     email?: SortOrder
     name?: SortOrderInput | SortOrder
     password?: SortOrder
@@ -6468,7 +6468,7 @@ export namespace Prisma {
     NOT?: UserScalarWhereWithAggregatesInput | UserScalarWhereWithAggregatesInput[]
     id?: StringWithAggregatesFilter<"User"> | string
     createdAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
-    updatedAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
+    updatedAt?: DateTimeNullableWithAggregatesFilter<"User"> | Date | string | null
     email?: StringWithAggregatesFilter<"User"> | string
     name?: StringNullableWithAggregatesFilter<"User"> | string | null
     password?: StringWithAggregatesFilter<"User"> | string
@@ -6483,7 +6483,7 @@ export namespace Prisma {
     NOT?: TaskWhereInput | TaskWhereInput[]
     id?: StringFilter<"Task"> | string
     createdAt?: DateTimeFilter<"Task"> | Date | string
-    updatedAt?: DateTimeFilter<"Task"> | Date | string
+    updatedAt?: DateTimeNullableFilter<"Task"> | Date | string | null
     name?: StringFilter<"Task"> | string
     priority?: EnumPriorityNullableFilter<"Task"> | $Enums.Priority | null
     isCompleted?: BoolNullableFilter<"Task"> | boolean | null
@@ -6494,7 +6494,7 @@ export namespace Prisma {
   export type TaskOrderByWithRelationInput = {
     id?: SortOrder
     createdAt?: SortOrder
-    updatedAt?: SortOrder
+    updatedAt?: SortOrderInput | SortOrder
     name?: SortOrder
     priority?: SortOrderInput | SortOrder
     isCompleted?: SortOrderInput | SortOrder
@@ -6508,7 +6508,7 @@ export namespace Prisma {
     OR?: TaskWhereInput[]
     NOT?: TaskWhereInput | TaskWhereInput[]
     createdAt?: DateTimeFilter<"Task"> | Date | string
-    updatedAt?: DateTimeFilter<"Task"> | Date | string
+    updatedAt?: DateTimeNullableFilter<"Task"> | Date | string | null
     name?: StringFilter<"Task"> | string
     priority?: EnumPriorityNullableFilter<"Task"> | $Enums.Priority | null
     isCompleted?: BoolNullableFilter<"Task"> | boolean | null
@@ -6519,7 +6519,7 @@ export namespace Prisma {
   export type TaskOrderByWithAggregationInput = {
     id?: SortOrder
     createdAt?: SortOrder
-    updatedAt?: SortOrder
+    updatedAt?: SortOrderInput | SortOrder
     name?: SortOrder
     priority?: SortOrderInput | SortOrder
     isCompleted?: SortOrderInput | SortOrder
@@ -6535,7 +6535,7 @@ export namespace Prisma {
     NOT?: TaskScalarWhereWithAggregatesInput | TaskScalarWhereWithAggregatesInput[]
     id?: StringWithAggregatesFilter<"Task"> | string
     createdAt?: DateTimeWithAggregatesFilter<"Task"> | Date | string
-    updatedAt?: DateTimeWithAggregatesFilter<"Task"> | Date | string
+    updatedAt?: DateTimeNullableWithAggregatesFilter<"Task"> | Date | string | null
     name?: StringWithAggregatesFilter<"Task"> | string
     priority?: EnumPriorityNullableWithAggregatesFilter<"Task"> | $Enums.Priority | null
     isCompleted?: BoolNullableWithAggregatesFilter<"Task"> | boolean | null
@@ -6548,7 +6548,7 @@ export namespace Prisma {
     NOT?: TimeBlockWhereInput | TimeBlockWhereInput[]
     id?: StringFilter<"TimeBlock"> | string
     createdAt?: DateTimeFilter<"TimeBlock"> | Date | string
-    updatedAt?: DateTimeFilter<"TimeBlock"> | Date | string
+    updatedAt?: DateTimeNullableFilter<"TimeBlock"> | Date | string | null
     name?: StringFilter<"TimeBlock"> | string
     color?: StringNullableFilter<"TimeBlock"> | string | null
     duration?: IntFilter<"TimeBlock"> | number
@@ -6560,7 +6560,7 @@ export namespace Prisma {
   export type TimeBlockOrderByWithRelationInput = {
     id?: SortOrder
     createdAt?: SortOrder
-    updatedAt?: SortOrder
+    updatedAt?: SortOrderInput | SortOrder
     name?: SortOrder
     color?: SortOrderInput | SortOrder
     duration?: SortOrder
@@ -6575,7 +6575,7 @@ export namespace Prisma {
     OR?: TimeBlockWhereInput[]
     NOT?: TimeBlockWhereInput | TimeBlockWhereInput[]
     createdAt?: DateTimeFilter<"TimeBlock"> | Date | string
-    updatedAt?: DateTimeFilter<"TimeBlock"> | Date | string
+    updatedAt?: DateTimeNullableFilter<"TimeBlock"> | Date | string | null
     name?: StringFilter<"TimeBlock"> | string
     color?: StringNullableFilter<"TimeBlock"> | string | null
     duration?: IntFilter<"TimeBlock"> | number
@@ -6587,7 +6587,7 @@ export namespace Prisma {
   export type TimeBlockOrderByWithAggregationInput = {
     id?: SortOrder
     createdAt?: SortOrder
-    updatedAt?: SortOrder
+    updatedAt?: SortOrderInput | SortOrder
     name?: SortOrder
     color?: SortOrderInput | SortOrder
     duration?: SortOrder
@@ -6606,7 +6606,7 @@ export namespace Prisma {
     NOT?: TimeBlockScalarWhereWithAggregatesInput | TimeBlockScalarWhereWithAggregatesInput[]
     id?: StringWithAggregatesFilter<"TimeBlock"> | string
     createdAt?: DateTimeWithAggregatesFilter<"TimeBlock"> | Date | string
-    updatedAt?: DateTimeWithAggregatesFilter<"TimeBlock"> | Date | string
+    updatedAt?: DateTimeNullableWithAggregatesFilter<"TimeBlock"> | Date | string | null
     name?: StringWithAggregatesFilter<"TimeBlock"> | string
     color?: StringNullableWithAggregatesFilter<"TimeBlock"> | string | null
     duration?: IntWithAggregatesFilter<"TimeBlock"> | number
@@ -6620,7 +6620,7 @@ export namespace Prisma {
     NOT?: PomodoroSessionWhereInput | PomodoroSessionWhereInput[]
     id?: StringFilter<"PomodoroSession"> | string
     createdAt?: DateTimeFilter<"PomodoroSession"> | Date | string
-    updatedAt?: DateTimeFilter<"PomodoroSession"> | Date | string
+    updatedAt?: DateTimeNullableFilter<"PomodoroSession"> | Date | string | null
     isCompleted?: BoolNullableFilter<"PomodoroSession"> | boolean | null
     userId?: StringFilter<"PomodoroSession"> | string
     user?: XOR<UserRelationFilter, UserWhereInput>
@@ -6630,7 +6630,7 @@ export namespace Prisma {
   export type PomodoroSessionOrderByWithRelationInput = {
     id?: SortOrder
     createdAt?: SortOrder
-    updatedAt?: SortOrder
+    updatedAt?: SortOrderInput | SortOrder
     isCompleted?: SortOrderInput | SortOrder
     userId?: SortOrder
     user?: UserOrderByWithRelationInput
@@ -6643,7 +6643,7 @@ export namespace Prisma {
     OR?: PomodoroSessionWhereInput[]
     NOT?: PomodoroSessionWhereInput | PomodoroSessionWhereInput[]
     createdAt?: DateTimeFilter<"PomodoroSession"> | Date | string
-    updatedAt?: DateTimeFilter<"PomodoroSession"> | Date | string
+    updatedAt?: DateTimeNullableFilter<"PomodoroSession"> | Date | string | null
     isCompleted?: BoolNullableFilter<"PomodoroSession"> | boolean | null
     userId?: StringFilter<"PomodoroSession"> | string
     user?: XOR<UserRelationFilter, UserWhereInput>
@@ -6653,7 +6653,7 @@ export namespace Prisma {
   export type PomodoroSessionOrderByWithAggregationInput = {
     id?: SortOrder
     createdAt?: SortOrder
-    updatedAt?: SortOrder
+    updatedAt?: SortOrderInput | SortOrder
     isCompleted?: SortOrderInput | SortOrder
     userId?: SortOrder
     _count?: PomodoroSessionCountOrderByAggregateInput
@@ -6667,7 +6667,7 @@ export namespace Prisma {
     NOT?: PomodoroSessionScalarWhereWithAggregatesInput | PomodoroSessionScalarWhereWithAggregatesInput[]
     id?: StringWithAggregatesFilter<"PomodoroSession"> | string
     createdAt?: DateTimeWithAggregatesFilter<"PomodoroSession"> | Date | string
-    updatedAt?: DateTimeWithAggregatesFilter<"PomodoroSession"> | Date | string
+    updatedAt?: DateTimeNullableWithAggregatesFilter<"PomodoroSession"> | Date | string | null
     isCompleted?: BoolNullableWithAggregatesFilter<"PomodoroSession"> | boolean | null
     userId?: StringWithAggregatesFilter<"PomodoroSession"> | string
   }
@@ -6678,7 +6678,7 @@ export namespace Prisma {
     NOT?: PomodoroRoundWhereInput | PomodoroRoundWhereInput[]
     id?: StringFilter<"PomodoroRound"> | string
     createdAt?: DateTimeFilter<"PomodoroRound"> | Date | string
-    updatedAt?: DateTimeFilter<"PomodoroRound"> | Date | string
+    updatedAt?: DateTimeNullableFilter<"PomodoroRound"> | Date | string | null
     totalSeconds?: IntFilter<"PomodoroRound"> | number
     isCompleted?: BoolNullableFilter<"PomodoroRound"> | boolean | null
     pomodoroSessionId?: StringFilter<"PomodoroRound"> | string
@@ -6688,7 +6688,7 @@ export namespace Prisma {
   export type PomodoroRoundOrderByWithRelationInput = {
     id?: SortOrder
     createdAt?: SortOrder
-    updatedAt?: SortOrder
+    updatedAt?: SortOrderInput | SortOrder
     totalSeconds?: SortOrder
     isCompleted?: SortOrderInput | SortOrder
     pomodoroSessionId?: SortOrder
@@ -6701,7 +6701,7 @@ export namespace Prisma {
     OR?: PomodoroRoundWhereInput[]
     NOT?: PomodoroRoundWhereInput | PomodoroRoundWhereInput[]
     createdAt?: DateTimeFilter<"PomodoroRound"> | Date | string
-    updatedAt?: DateTimeFilter<"PomodoroRound"> | Date | string
+    updatedAt?: DateTimeNullableFilter<"PomodoroRound"> | Date | string | null
     totalSeconds?: IntFilter<"PomodoroRound"> | number
     isCompleted?: BoolNullableFilter<"PomodoroRound"> | boolean | null
     pomodoroSessionId?: StringFilter<"PomodoroRound"> | string
@@ -6711,7 +6711,7 @@ export namespace Prisma {
   export type PomodoroRoundOrderByWithAggregationInput = {
     id?: SortOrder
     createdAt?: SortOrder
-    updatedAt?: SortOrder
+    updatedAt?: SortOrderInput | SortOrder
     totalSeconds?: SortOrder
     isCompleted?: SortOrderInput | SortOrder
     pomodoroSessionId?: SortOrder
@@ -6728,7 +6728,7 @@ export namespace Prisma {
     NOT?: PomodoroRoundScalarWhereWithAggregatesInput | PomodoroRoundScalarWhereWithAggregatesInput[]
     id?: StringWithAggregatesFilter<"PomodoroRound"> | string
     createdAt?: DateTimeWithAggregatesFilter<"PomodoroRound"> | Date | string
-    updatedAt?: DateTimeWithAggregatesFilter<"PomodoroRound"> | Date | string
+    updatedAt?: DateTimeNullableWithAggregatesFilter<"PomodoroRound"> | Date | string | null
     totalSeconds?: IntWithAggregatesFilter<"PomodoroRound"> | number
     isCompleted?: BoolNullableWithAggregatesFilter<"PomodoroRound"> | boolean | null
     pomodoroSessionId?: StringWithAggregatesFilter<"PomodoroRound"> | string
@@ -6737,7 +6737,7 @@ export namespace Prisma {
   export type UserCreateInput = {
     id?: string
     createdAt?: Date | string
-    updatedAt: Date | string
+    updatedAt?: Date | string | null
     email: string
     name?: string | null
     password: string
@@ -6752,7 +6752,7 @@ export namespace Prisma {
   export type UserUncheckedCreateInput = {
     id?: string
     createdAt?: Date | string
-    updatedAt: Date | string
+    updatedAt?: Date | string | null
     email: string
     name?: string | null
     password: string
@@ -6767,7 +6767,7 @@ export namespace Prisma {
   export type UserUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     email?: StringFieldUpdateOperationsInput | string
     name?: NullableStringFieldUpdateOperationsInput | string | null
     password?: StringFieldUpdateOperationsInput | string
@@ -6782,7 +6782,7 @@ export namespace Prisma {
   export type UserUncheckedUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     email?: StringFieldUpdateOperationsInput | string
     name?: NullableStringFieldUpdateOperationsInput | string | null
     password?: StringFieldUpdateOperationsInput | string
@@ -6797,7 +6797,7 @@ export namespace Prisma {
   export type UserCreateManyInput = {
     id?: string
     createdAt?: Date | string
-    updatedAt: Date | string
+    updatedAt?: Date | string | null
     email: string
     name?: string | null
     password: string
@@ -6809,7 +6809,7 @@ export namespace Prisma {
   export type UserUpdateManyMutationInput = {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     email?: StringFieldUpdateOperationsInput | string
     name?: NullableStringFieldUpdateOperationsInput | string | null
     password?: StringFieldUpdateOperationsInput | string
@@ -6821,7 +6821,7 @@ export namespace Prisma {
   export type UserUncheckedUpdateManyInput = {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     email?: StringFieldUpdateOperationsInput | string
     name?: NullableStringFieldUpdateOperationsInput | string | null
     password?: StringFieldUpdateOperationsInput | string
@@ -6833,7 +6833,7 @@ export namespace Prisma {
   export type TaskCreateInput = {
     id?: string
     createdAt?: Date | string
-    updatedAt: Date | string
+    updatedAt?: Date | string | null
     name: string
     priority?: $Enums.Priority | null
     isCompleted?: boolean | null
@@ -6843,7 +6843,7 @@ export namespace Prisma {
   export type TaskUncheckedCreateInput = {
     id?: string
     createdAt?: Date | string
-    updatedAt: Date | string
+    updatedAt?: Date | string | null
     name: string
     priority?: $Enums.Priority | null
     isCompleted?: boolean | null
@@ -6853,7 +6853,7 @@ export namespace Prisma {
   export type TaskUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     name?: StringFieldUpdateOperationsInput | string
     priority?: NullableEnumPriorityFieldUpdateOperationsInput | $Enums.Priority | null
     isCompleted?: NullableBoolFieldUpdateOperationsInput | boolean | null
@@ -6863,7 +6863,7 @@ export namespace Prisma {
   export type TaskUncheckedUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     name?: StringFieldUpdateOperationsInput | string
     priority?: NullableEnumPriorityFieldUpdateOperationsInput | $Enums.Priority | null
     isCompleted?: NullableBoolFieldUpdateOperationsInput | boolean | null
@@ -6873,7 +6873,7 @@ export namespace Prisma {
   export type TaskCreateManyInput = {
     id?: string
     createdAt?: Date | string
-    updatedAt: Date | string
+    updatedAt?: Date | string | null
     name: string
     priority?: $Enums.Priority | null
     isCompleted?: boolean | null
@@ -6883,7 +6883,7 @@ export namespace Prisma {
   export type TaskUpdateManyMutationInput = {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     name?: StringFieldUpdateOperationsInput | string
     priority?: NullableEnumPriorityFieldUpdateOperationsInput | $Enums.Priority | null
     isCompleted?: NullableBoolFieldUpdateOperationsInput | boolean | null
@@ -6892,7 +6892,7 @@ export namespace Prisma {
   export type TaskUncheckedUpdateManyInput = {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     name?: StringFieldUpdateOperationsInput | string
     priority?: NullableEnumPriorityFieldUpdateOperationsInput | $Enums.Priority | null
     isCompleted?: NullableBoolFieldUpdateOperationsInput | boolean | null
@@ -6902,7 +6902,7 @@ export namespace Prisma {
   export type TimeBlockCreateInput = {
     id?: string
     createdAt?: Date | string
-    updatedAt: Date | string
+    updatedAt?: Date | string | null
     name: string
     color?: string | null
     duration: number
@@ -6913,7 +6913,7 @@ export namespace Prisma {
   export type TimeBlockUncheckedCreateInput = {
     id?: string
     createdAt?: Date | string
-    updatedAt: Date | string
+    updatedAt?: Date | string | null
     name: string
     color?: string | null
     duration: number
@@ -6924,7 +6924,7 @@ export namespace Prisma {
   export type TimeBlockUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     name?: StringFieldUpdateOperationsInput | string
     color?: NullableStringFieldUpdateOperationsInput | string | null
     duration?: IntFieldUpdateOperationsInput | number
@@ -6935,7 +6935,7 @@ export namespace Prisma {
   export type TimeBlockUncheckedUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     name?: StringFieldUpdateOperationsInput | string
     color?: NullableStringFieldUpdateOperationsInput | string | null
     duration?: IntFieldUpdateOperationsInput | number
@@ -6946,7 +6946,7 @@ export namespace Prisma {
   export type TimeBlockCreateManyInput = {
     id?: string
     createdAt?: Date | string
-    updatedAt: Date | string
+    updatedAt?: Date | string | null
     name: string
     color?: string | null
     duration: number
@@ -6957,7 +6957,7 @@ export namespace Prisma {
   export type TimeBlockUpdateManyMutationInput = {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     name?: StringFieldUpdateOperationsInput | string
     color?: NullableStringFieldUpdateOperationsInput | string | null
     duration?: IntFieldUpdateOperationsInput | number
@@ -6967,7 +6967,7 @@ export namespace Prisma {
   export type TimeBlockUncheckedUpdateManyInput = {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     name?: StringFieldUpdateOperationsInput | string
     color?: NullableStringFieldUpdateOperationsInput | string | null
     duration?: IntFieldUpdateOperationsInput | number
@@ -6978,7 +6978,7 @@ export namespace Prisma {
   export type PomodoroSessionCreateInput = {
     id?: string
     createdAt?: Date | string
-    updatedAt: Date | string
+    updatedAt?: Date | string | null
     isCompleted?: boolean | null
     user: UserCreateNestedOneWithoutPomodoroSessionsInput
     rounds?: PomodoroRoundCreateNestedManyWithoutPomodoroSessionInput
@@ -6987,7 +6987,7 @@ export namespace Prisma {
   export type PomodoroSessionUncheckedCreateInput = {
     id?: string
     createdAt?: Date | string
-    updatedAt: Date | string
+    updatedAt?: Date | string | null
     isCompleted?: boolean | null
     userId: string
     rounds?: PomodoroRoundUncheckedCreateNestedManyWithoutPomodoroSessionInput
@@ -6996,7 +6996,7 @@ export namespace Prisma {
   export type PomodoroSessionUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     isCompleted?: NullableBoolFieldUpdateOperationsInput | boolean | null
     user?: UserUpdateOneRequiredWithoutPomodoroSessionsNestedInput
     rounds?: PomodoroRoundUpdateManyWithoutPomodoroSessionNestedInput
@@ -7005,7 +7005,7 @@ export namespace Prisma {
   export type PomodoroSessionUncheckedUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     isCompleted?: NullableBoolFieldUpdateOperationsInput | boolean | null
     userId?: StringFieldUpdateOperationsInput | string
     rounds?: PomodoroRoundUncheckedUpdateManyWithoutPomodoroSessionNestedInput
@@ -7014,7 +7014,7 @@ export namespace Prisma {
   export type PomodoroSessionCreateManyInput = {
     id?: string
     createdAt?: Date | string
-    updatedAt: Date | string
+    updatedAt?: Date | string | null
     isCompleted?: boolean | null
     userId: string
   }
@@ -7022,14 +7022,14 @@ export namespace Prisma {
   export type PomodoroSessionUpdateManyMutationInput = {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     isCompleted?: NullableBoolFieldUpdateOperationsInput | boolean | null
   }
 
   export type PomodoroSessionUncheckedUpdateManyInput = {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     isCompleted?: NullableBoolFieldUpdateOperationsInput | boolean | null
     userId?: StringFieldUpdateOperationsInput | string
   }
@@ -7037,7 +7037,7 @@ export namespace Prisma {
   export type PomodoroRoundCreateInput = {
     id?: string
     createdAt?: Date | string
-    updatedAt: Date | string
+    updatedAt?: Date | string | null
     totalSeconds: number
     isCompleted?: boolean | null
     pomodoroSession: PomodoroSessionCreateNestedOneWithoutRoundsInput
@@ -7046,7 +7046,7 @@ export namespace Prisma {
   export type PomodoroRoundUncheckedCreateInput = {
     id?: string
     createdAt?: Date | string
-    updatedAt: Date | string
+    updatedAt?: Date | string | null
     totalSeconds: number
     isCompleted?: boolean | null
     pomodoroSessionId: string
@@ -7055,7 +7055,7 @@ export namespace Prisma {
   export type PomodoroRoundUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     totalSeconds?: IntFieldUpdateOperationsInput | number
     isCompleted?: NullableBoolFieldUpdateOperationsInput | boolean | null
     pomodoroSession?: PomodoroSessionUpdateOneRequiredWithoutRoundsNestedInput
@@ -7064,7 +7064,7 @@ export namespace Prisma {
   export type PomodoroRoundUncheckedUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     totalSeconds?: IntFieldUpdateOperationsInput | number
     isCompleted?: NullableBoolFieldUpdateOperationsInput | boolean | null
     pomodoroSessionId?: StringFieldUpdateOperationsInput | string
@@ -7073,7 +7073,7 @@ export namespace Prisma {
   export type PomodoroRoundCreateManyInput = {
     id?: string
     createdAt?: Date | string
-    updatedAt: Date | string
+    updatedAt?: Date | string | null
     totalSeconds: number
     isCompleted?: boolean | null
     pomodoroSessionId: string
@@ -7082,7 +7082,7 @@ export namespace Prisma {
   export type PomodoroRoundUpdateManyMutationInput = {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     totalSeconds?: IntFieldUpdateOperationsInput | number
     isCompleted?: NullableBoolFieldUpdateOperationsInput | boolean | null
   }
@@ -7090,7 +7090,7 @@ export namespace Prisma {
   export type PomodoroRoundUncheckedUpdateManyInput = {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     totalSeconds?: IntFieldUpdateOperationsInput | number
     isCompleted?: NullableBoolFieldUpdateOperationsInput | boolean | null
     pomodoroSessionId?: StringFieldUpdateOperationsInput | string
@@ -7120,6 +7120,17 @@ export namespace Prisma {
     gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
     gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
     not?: NestedDateTimeFilter<$PrismaModel> | Date | string
+  }
+
+  export type DateTimeNullableFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | null
+    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
+    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeNullableFilter<$PrismaModel> | Date | string | null
   }
 
   export type StringNullableFilter<$PrismaModel = never> = {
@@ -7261,6 +7272,20 @@ export namespace Prisma {
     _count?: NestedIntFilter<$PrismaModel>
     _min?: NestedDateTimeFilter<$PrismaModel>
     _max?: NestedDateTimeFilter<$PrismaModel>
+  }
+
+  export type DateTimeNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | null
+    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
+    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeNullableWithAggregatesFilter<$PrismaModel> | Date | string | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _min?: NestedDateTimeNullableFilter<$PrismaModel>
+    _max?: NestedDateTimeNullableFilter<$PrismaModel>
   }
 
   export type StringNullableWithAggregatesFilter<$PrismaModel = never> = {
@@ -7556,6 +7581,10 @@ export namespace Prisma {
     set?: Date | string
   }
 
+  export type NullableDateTimeFieldUpdateOperationsInput = {
+    set?: Date | string | null
+  }
+
   export type NullableStringFieldUpdateOperationsInput = {
     set?: string | null
   }
@@ -7791,6 +7820,17 @@ export namespace Prisma {
     not?: NestedDateTimeFilter<$PrismaModel> | Date | string
   }
 
+  export type NestedDateTimeNullableFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | null
+    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
+    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeNullableFilter<$PrismaModel> | Date | string | null
+  }
+
   export type NestedStringNullableFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel> | null
     in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
@@ -7856,6 +7896,20 @@ export namespace Prisma {
     _count?: NestedIntFilter<$PrismaModel>
     _min?: NestedDateTimeFilter<$PrismaModel>
     _max?: NestedDateTimeFilter<$PrismaModel>
+  }
+
+  export type NestedDateTimeNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | null
+    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
+    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeNullableWithAggregatesFilter<$PrismaModel> | Date | string | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _min?: NestedDateTimeNullableFilter<$PrismaModel>
+    _max?: NestedDateTimeNullableFilter<$PrismaModel>
   }
 
   export type NestedStringNullableWithAggregatesFilter<$PrismaModel = never> = {
@@ -7962,7 +8016,7 @@ export namespace Prisma {
   export type TaskCreateWithoutUserInput = {
     id?: string
     createdAt?: Date | string
-    updatedAt: Date | string
+    updatedAt?: Date | string | null
     name: string
     priority?: $Enums.Priority | null
     isCompleted?: boolean | null
@@ -7971,7 +8025,7 @@ export namespace Prisma {
   export type TaskUncheckedCreateWithoutUserInput = {
     id?: string
     createdAt?: Date | string
-    updatedAt: Date | string
+    updatedAt?: Date | string | null
     name: string
     priority?: $Enums.Priority | null
     isCompleted?: boolean | null
@@ -7990,7 +8044,7 @@ export namespace Prisma {
   export type TimeBlockCreateWithoutUserInput = {
     id?: string
     createdAt?: Date | string
-    updatedAt: Date | string
+    updatedAt?: Date | string | null
     name: string
     color?: string | null
     duration: number
@@ -8000,7 +8054,7 @@ export namespace Prisma {
   export type TimeBlockUncheckedCreateWithoutUserInput = {
     id?: string
     createdAt?: Date | string
-    updatedAt: Date | string
+    updatedAt?: Date | string | null
     name: string
     color?: string | null
     duration: number
@@ -8020,7 +8074,7 @@ export namespace Prisma {
   export type PomodoroSessionCreateWithoutUserInput = {
     id?: string
     createdAt?: Date | string
-    updatedAt: Date | string
+    updatedAt?: Date | string | null
     isCompleted?: boolean | null
     rounds?: PomodoroRoundCreateNestedManyWithoutPomodoroSessionInput
   }
@@ -8028,7 +8082,7 @@ export namespace Prisma {
   export type PomodoroSessionUncheckedCreateWithoutUserInput = {
     id?: string
     createdAt?: Date | string
-    updatedAt: Date | string
+    updatedAt?: Date | string | null
     isCompleted?: boolean | null
     rounds?: PomodoroRoundUncheckedCreateNestedManyWithoutPomodoroSessionInput
   }
@@ -8065,7 +8119,7 @@ export namespace Prisma {
     NOT?: TaskScalarWhereInput | TaskScalarWhereInput[]
     id?: StringFilter<"Task"> | string
     createdAt?: DateTimeFilter<"Task"> | Date | string
-    updatedAt?: DateTimeFilter<"Task"> | Date | string
+    updatedAt?: DateTimeNullableFilter<"Task"> | Date | string | null
     name?: StringFilter<"Task"> | string
     priority?: EnumPriorityNullableFilter<"Task"> | $Enums.Priority | null
     isCompleted?: BoolNullableFilter<"Task"> | boolean | null
@@ -8094,7 +8148,7 @@ export namespace Prisma {
     NOT?: TimeBlockScalarWhereInput | TimeBlockScalarWhereInput[]
     id?: StringFilter<"TimeBlock"> | string
     createdAt?: DateTimeFilter<"TimeBlock"> | Date | string
-    updatedAt?: DateTimeFilter<"TimeBlock"> | Date | string
+    updatedAt?: DateTimeNullableFilter<"TimeBlock"> | Date | string | null
     name?: StringFilter<"TimeBlock"> | string
     color?: StringNullableFilter<"TimeBlock"> | string | null
     duration?: IntFilter<"TimeBlock"> | number
@@ -8124,7 +8178,7 @@ export namespace Prisma {
     NOT?: PomodoroSessionScalarWhereInput | PomodoroSessionScalarWhereInput[]
     id?: StringFilter<"PomodoroSession"> | string
     createdAt?: DateTimeFilter<"PomodoroSession"> | Date | string
-    updatedAt?: DateTimeFilter<"PomodoroSession"> | Date | string
+    updatedAt?: DateTimeNullableFilter<"PomodoroSession"> | Date | string | null
     isCompleted?: BoolNullableFilter<"PomodoroSession"> | boolean | null
     userId?: StringFilter<"PomodoroSession"> | string
   }
@@ -8132,7 +8186,7 @@ export namespace Prisma {
   export type UserCreateWithoutTasksInput = {
     id?: string
     createdAt?: Date | string
-    updatedAt: Date | string
+    updatedAt?: Date | string | null
     email: string
     name?: string | null
     password: string
@@ -8146,7 +8200,7 @@ export namespace Prisma {
   export type UserUncheckedCreateWithoutTasksInput = {
     id?: string
     createdAt?: Date | string
-    updatedAt: Date | string
+    updatedAt?: Date | string | null
     email: string
     name?: string | null
     password: string
@@ -8176,7 +8230,7 @@ export namespace Prisma {
   export type UserUpdateWithoutTasksInput = {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     email?: StringFieldUpdateOperationsInput | string
     name?: NullableStringFieldUpdateOperationsInput | string | null
     password?: StringFieldUpdateOperationsInput | string
@@ -8190,7 +8244,7 @@ export namespace Prisma {
   export type UserUncheckedUpdateWithoutTasksInput = {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     email?: StringFieldUpdateOperationsInput | string
     name?: NullableStringFieldUpdateOperationsInput | string | null
     password?: StringFieldUpdateOperationsInput | string
@@ -8204,7 +8258,7 @@ export namespace Prisma {
   export type UserCreateWithoutTimeBlocksInput = {
     id?: string
     createdAt?: Date | string
-    updatedAt: Date | string
+    updatedAt?: Date | string | null
     email: string
     name?: string | null
     password: string
@@ -8218,7 +8272,7 @@ export namespace Prisma {
   export type UserUncheckedCreateWithoutTimeBlocksInput = {
     id?: string
     createdAt?: Date | string
-    updatedAt: Date | string
+    updatedAt?: Date | string | null
     email: string
     name?: string | null
     password: string
@@ -8248,7 +8302,7 @@ export namespace Prisma {
   export type UserUpdateWithoutTimeBlocksInput = {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     email?: StringFieldUpdateOperationsInput | string
     name?: NullableStringFieldUpdateOperationsInput | string | null
     password?: StringFieldUpdateOperationsInput | string
@@ -8262,7 +8316,7 @@ export namespace Prisma {
   export type UserUncheckedUpdateWithoutTimeBlocksInput = {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     email?: StringFieldUpdateOperationsInput | string
     name?: NullableStringFieldUpdateOperationsInput | string | null
     password?: StringFieldUpdateOperationsInput | string
@@ -8276,7 +8330,7 @@ export namespace Prisma {
   export type UserCreateWithoutPomodoroSessionsInput = {
     id?: string
     createdAt?: Date | string
-    updatedAt: Date | string
+    updatedAt?: Date | string | null
     email: string
     name?: string | null
     password: string
@@ -8290,7 +8344,7 @@ export namespace Prisma {
   export type UserUncheckedCreateWithoutPomodoroSessionsInput = {
     id?: string
     createdAt?: Date | string
-    updatedAt: Date | string
+    updatedAt?: Date | string | null
     email: string
     name?: string | null
     password: string
@@ -8309,7 +8363,7 @@ export namespace Prisma {
   export type PomodoroRoundCreateWithoutPomodoroSessionInput = {
     id?: string
     createdAt?: Date | string
-    updatedAt: Date | string
+    updatedAt?: Date | string | null
     totalSeconds: number
     isCompleted?: boolean | null
   }
@@ -8317,7 +8371,7 @@ export namespace Prisma {
   export type PomodoroRoundUncheckedCreateWithoutPomodoroSessionInput = {
     id?: string
     createdAt?: Date | string
-    updatedAt: Date | string
+    updatedAt?: Date | string | null
     totalSeconds: number
     isCompleted?: boolean | null
   }
@@ -8346,7 +8400,7 @@ export namespace Prisma {
   export type UserUpdateWithoutPomodoroSessionsInput = {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     email?: StringFieldUpdateOperationsInput | string
     name?: NullableStringFieldUpdateOperationsInput | string | null
     password?: StringFieldUpdateOperationsInput | string
@@ -8360,7 +8414,7 @@ export namespace Prisma {
   export type UserUncheckedUpdateWithoutPomodoroSessionsInput = {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     email?: StringFieldUpdateOperationsInput | string
     name?: NullableStringFieldUpdateOperationsInput | string | null
     password?: StringFieldUpdateOperationsInput | string
@@ -8393,7 +8447,7 @@ export namespace Prisma {
     NOT?: PomodoroRoundScalarWhereInput | PomodoroRoundScalarWhereInput[]
     id?: StringFilter<"PomodoroRound"> | string
     createdAt?: DateTimeFilter<"PomodoroRound"> | Date | string
-    updatedAt?: DateTimeFilter<"PomodoroRound"> | Date | string
+    updatedAt?: DateTimeNullableFilter<"PomodoroRound"> | Date | string | null
     totalSeconds?: IntFilter<"PomodoroRound"> | number
     isCompleted?: BoolNullableFilter<"PomodoroRound"> | boolean | null
     pomodoroSessionId?: StringFilter<"PomodoroRound"> | string
@@ -8402,7 +8456,7 @@ export namespace Prisma {
   export type PomodoroSessionCreateWithoutRoundsInput = {
     id?: string
     createdAt?: Date | string
-    updatedAt: Date | string
+    updatedAt?: Date | string | null
     isCompleted?: boolean | null
     user: UserCreateNestedOneWithoutPomodoroSessionsInput
   }
@@ -8410,7 +8464,7 @@ export namespace Prisma {
   export type PomodoroSessionUncheckedCreateWithoutRoundsInput = {
     id?: string
     createdAt?: Date | string
-    updatedAt: Date | string
+    updatedAt?: Date | string | null
     isCompleted?: boolean | null
     userId: string
   }
@@ -8434,7 +8488,7 @@ export namespace Prisma {
   export type PomodoroSessionUpdateWithoutRoundsInput = {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     isCompleted?: NullableBoolFieldUpdateOperationsInput | boolean | null
     user?: UserUpdateOneRequiredWithoutPomodoroSessionsNestedInput
   }
@@ -8442,7 +8496,7 @@ export namespace Prisma {
   export type PomodoroSessionUncheckedUpdateWithoutRoundsInput = {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     isCompleted?: NullableBoolFieldUpdateOperationsInput | boolean | null
     userId?: StringFieldUpdateOperationsInput | string
   }
@@ -8450,7 +8504,7 @@ export namespace Prisma {
   export type TaskCreateManyUserInput = {
     id?: string
     createdAt?: Date | string
-    updatedAt: Date | string
+    updatedAt?: Date | string | null
     name: string
     priority?: $Enums.Priority | null
     isCompleted?: boolean | null
@@ -8459,7 +8513,7 @@ export namespace Prisma {
   export type TimeBlockCreateManyUserInput = {
     id?: string
     createdAt?: Date | string
-    updatedAt: Date | string
+    updatedAt?: Date | string | null
     name: string
     color?: string | null
     duration: number
@@ -8469,14 +8523,14 @@ export namespace Prisma {
   export type PomodoroSessionCreateManyUserInput = {
     id?: string
     createdAt?: Date | string
-    updatedAt: Date | string
+    updatedAt?: Date | string | null
     isCompleted?: boolean | null
   }
 
   export type TaskUpdateWithoutUserInput = {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     name?: StringFieldUpdateOperationsInput | string
     priority?: NullableEnumPriorityFieldUpdateOperationsInput | $Enums.Priority | null
     isCompleted?: NullableBoolFieldUpdateOperationsInput | boolean | null
@@ -8485,7 +8539,7 @@ export namespace Prisma {
   export type TaskUncheckedUpdateWithoutUserInput = {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     name?: StringFieldUpdateOperationsInput | string
     priority?: NullableEnumPriorityFieldUpdateOperationsInput | $Enums.Priority | null
     isCompleted?: NullableBoolFieldUpdateOperationsInput | boolean | null
@@ -8494,7 +8548,7 @@ export namespace Prisma {
   export type TaskUncheckedUpdateManyWithoutUserInput = {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     name?: StringFieldUpdateOperationsInput | string
     priority?: NullableEnumPriorityFieldUpdateOperationsInput | $Enums.Priority | null
     isCompleted?: NullableBoolFieldUpdateOperationsInput | boolean | null
@@ -8503,7 +8557,7 @@ export namespace Prisma {
   export type TimeBlockUpdateWithoutUserInput = {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     name?: StringFieldUpdateOperationsInput | string
     color?: NullableStringFieldUpdateOperationsInput | string | null
     duration?: IntFieldUpdateOperationsInput | number
@@ -8513,7 +8567,7 @@ export namespace Prisma {
   export type TimeBlockUncheckedUpdateWithoutUserInput = {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     name?: StringFieldUpdateOperationsInput | string
     color?: NullableStringFieldUpdateOperationsInput | string | null
     duration?: IntFieldUpdateOperationsInput | number
@@ -8523,7 +8577,7 @@ export namespace Prisma {
   export type TimeBlockUncheckedUpdateManyWithoutUserInput = {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     name?: StringFieldUpdateOperationsInput | string
     color?: NullableStringFieldUpdateOperationsInput | string | null
     duration?: IntFieldUpdateOperationsInput | number
@@ -8533,7 +8587,7 @@ export namespace Prisma {
   export type PomodoroSessionUpdateWithoutUserInput = {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     isCompleted?: NullableBoolFieldUpdateOperationsInput | boolean | null
     rounds?: PomodoroRoundUpdateManyWithoutPomodoroSessionNestedInput
   }
@@ -8541,7 +8595,7 @@ export namespace Prisma {
   export type PomodoroSessionUncheckedUpdateWithoutUserInput = {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     isCompleted?: NullableBoolFieldUpdateOperationsInput | boolean | null
     rounds?: PomodoroRoundUncheckedUpdateManyWithoutPomodoroSessionNestedInput
   }
@@ -8549,14 +8603,14 @@ export namespace Prisma {
   export type PomodoroSessionUncheckedUpdateManyWithoutUserInput = {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     isCompleted?: NullableBoolFieldUpdateOperationsInput | boolean | null
   }
 
   export type PomodoroRoundCreateManyPomodoroSessionInput = {
     id?: string
     createdAt?: Date | string
-    updatedAt: Date | string
+    updatedAt?: Date | string | null
     totalSeconds: number
     isCompleted?: boolean | null
   }
@@ -8564,7 +8618,7 @@ export namespace Prisma {
   export type PomodoroRoundUpdateWithoutPomodoroSessionInput = {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     totalSeconds?: IntFieldUpdateOperationsInput | number
     isCompleted?: NullableBoolFieldUpdateOperationsInput | boolean | null
   }
@@ -8572,7 +8626,7 @@ export namespace Prisma {
   export type PomodoroRoundUncheckedUpdateWithoutPomodoroSessionInput = {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     totalSeconds?: IntFieldUpdateOperationsInput | number
     isCompleted?: NullableBoolFieldUpdateOperationsInput | boolean | null
   }
@@ -8580,7 +8634,7 @@ export namespace Prisma {
   export type PomodoroRoundUncheckedUpdateManyWithoutPomodoroSessionInput = {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     totalSeconds?: IntFieldUpdateOperationsInput | number
     isCompleted?: NullableBoolFieldUpdateOperationsInput | boolean | null
   }
