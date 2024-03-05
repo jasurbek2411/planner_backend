@@ -7,6 +7,13 @@ import { TimeBlockModule } from './time-block/time-block.module';
 import { PomodoroModule } from './pomodoro/pomodoro.module';
 
 @Module({
-  imports: [ConfigModule.forRoot(), AuthModule, UserModule, TaskModule, TimeBlockModule, PomodoroModule],
+  imports: [
+    ConfigModule.forRoot(),
+    AuthModule,
+    UserModule,
+    TaskModule,
+    TimeBlockModule,
+    PomodoroModule,
+  ],
 })
 export class AppModule {}

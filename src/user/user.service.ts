@@ -22,10 +22,10 @@ export class UserService {
     const profile = await this.getById(id);
 
     const totalTasks = profile.tasks.length;
-    const compeltedTasks = this.prisma.task.count({
+    const compeltedTasks = await this.prisma.task.count({
       where: { id, isCompleted: true },
     });
-
+    
     const todayStart = startOfDay(new Date());
     const weekStart = startOfDay(subDays(new Date(), 7));
 
