@@ -2229,7 +2229,6 @@ export declare class PrismaClientValidationError extends Error {
 }
 
 export declare interface PrismaPromise<T> extends Promise<T> {
-    length: any;
     [Symbol.toStringTag]: 'PrismaPromise';
 }
 

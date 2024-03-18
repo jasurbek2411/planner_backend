@@ -25,7 +25,7 @@ export class UserService {
     const compeltedTasks = await this.prisma.task.count({
       where: { id, isCompleted: true },
     });
-    
+
     const todayStart = startOfDay(new Date());
     const weekStart = startOfDay(subDays(new Date(), 7));
 

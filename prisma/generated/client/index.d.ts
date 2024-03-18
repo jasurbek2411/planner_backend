@@ -2517,7 +2517,7 @@ export namespace Prisma {
     id: string
     createdAt: Date
     updatedAt: Date | null
-    name: string
+    name: string | null
     priority: $Enums.Priority | null
     isCompleted: boolean | null
     userId: string
@@ -2575,7 +2575,7 @@ export namespace Prisma {
       id: string
       createdAt: Date
       updatedAt: Date | null
-      name: string
+      name: string | null
       priority: $Enums.Priority | null
       isCompleted: boolean | null
       userId: string
@@ -6484,7 +6484,7 @@ export namespace Prisma {
     id?: StringFilter<"Task"> | string
     createdAt?: DateTimeFilter<"Task"> | Date | string
     updatedAt?: DateTimeNullableFilter<"Task"> | Date | string | null
-    name?: StringFilter<"Task"> | string
+    name?: StringNullableFilter<"Task"> | string | null
     priority?: EnumPriorityNullableFilter<"Task"> | $Enums.Priority | null
     isCompleted?: BoolNullableFilter<"Task"> | boolean | null
     userId?: StringFilter<"Task"> | string
@@ -6495,7 +6495,7 @@ export namespace Prisma {
     id?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrderInput | SortOrder
-    name?: SortOrder
+    name?: SortOrderInput | SortOrder
     priority?: SortOrderInput | SortOrder
     isCompleted?: SortOrderInput | SortOrder
     userId?: SortOrder
@@ -6509,7 +6509,7 @@ export namespace Prisma {
     NOT?: TaskWhereInput | TaskWhereInput[]
     createdAt?: DateTimeFilter<"Task"> | Date | string
     updatedAt?: DateTimeNullableFilter<"Task"> | Date | string | null
-    name?: StringFilter<"Task"> | string
+    name?: StringNullableFilter<"Task"> | string | null
     priority?: EnumPriorityNullableFilter<"Task"> | $Enums.Priority | null
     isCompleted?: BoolNullableFilter<"Task"> | boolean | null
     userId?: StringFilter<"Task"> | string
@@ -6520,7 +6520,7 @@ export namespace Prisma {
     id?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrderInput | SortOrder
-    name?: SortOrder
+    name?: SortOrderInput | SortOrder
     priority?: SortOrderInput | SortOrder
     isCompleted?: SortOrderInput | SortOrder
     userId?: SortOrder
@@ -6536,7 +6536,7 @@ export namespace Prisma {
     id?: StringWithAggregatesFilter<"Task"> | string
     createdAt?: DateTimeWithAggregatesFilter<"Task"> | Date | string
     updatedAt?: DateTimeNullableWithAggregatesFilter<"Task"> | Date | string | null
-    name?: StringWithAggregatesFilter<"Task"> | string
+    name?: StringNullableWithAggregatesFilter<"Task"> | string | null
     priority?: EnumPriorityNullableWithAggregatesFilter<"Task"> | $Enums.Priority | null
     isCompleted?: BoolNullableWithAggregatesFilter<"Task"> | boolean | null
     userId?: StringWithAggregatesFilter<"Task"> | string
@@ -6834,7 +6834,7 @@ export namespace Prisma {
     id?: string
     createdAt?: Date | string
     updatedAt?: Date | string | null
-    name: string
+    name?: string | null
     priority?: $Enums.Priority | null
     isCompleted?: boolean | null
     user: UserCreateNestedOneWithoutTasksInput
@@ -6844,7 +6844,7 @@ export namespace Prisma {
     id?: string
     createdAt?: Date | string
     updatedAt?: Date | string | null
-    name: string
+    name?: string | null
     priority?: $Enums.Priority | null
     isCompleted?: boolean | null
     userId: string
@@ -6854,7 +6854,7 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    name?: StringFieldUpdateOperationsInput | string
+    name?: NullableStringFieldUpdateOperationsInput | string | null
     priority?: NullableEnumPriorityFieldUpdateOperationsInput | $Enums.Priority | null
     isCompleted?: NullableBoolFieldUpdateOperationsInput | boolean | null
     user?: UserUpdateOneRequiredWithoutTasksNestedInput
@@ -6864,7 +6864,7 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    name?: StringFieldUpdateOperationsInput | string
+    name?: NullableStringFieldUpdateOperationsInput | string | null
     priority?: NullableEnumPriorityFieldUpdateOperationsInput | $Enums.Priority | null
     isCompleted?: NullableBoolFieldUpdateOperationsInput | boolean | null
     userId?: StringFieldUpdateOperationsInput | string
@@ -6874,7 +6874,7 @@ export namespace Prisma {
     id?: string
     createdAt?: Date | string
     updatedAt?: Date | string | null
-    name: string
+    name?: string | null
     priority?: $Enums.Priority | null
     isCompleted?: boolean | null
     userId: string
@@ -6884,7 +6884,7 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    name?: StringFieldUpdateOperationsInput | string
+    name?: NullableStringFieldUpdateOperationsInput | string | null
     priority?: NullableEnumPriorityFieldUpdateOperationsInput | $Enums.Priority | null
     isCompleted?: NullableBoolFieldUpdateOperationsInput | boolean | null
   }
@@ -6893,7 +6893,7 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    name?: StringFieldUpdateOperationsInput | string
+    name?: NullableStringFieldUpdateOperationsInput | string | null
     priority?: NullableEnumPriorityFieldUpdateOperationsInput | $Enums.Priority | null
     isCompleted?: NullableBoolFieldUpdateOperationsInput | boolean | null
     userId?: StringFieldUpdateOperationsInput | string
@@ -8017,7 +8017,7 @@ export namespace Prisma {
     id?: string
     createdAt?: Date | string
     updatedAt?: Date | string | null
-    name: string
+    name?: string | null
     priority?: $Enums.Priority | null
     isCompleted?: boolean | null
   }
@@ -8026,7 +8026,7 @@ export namespace Prisma {
     id?: string
     createdAt?: Date | string
     updatedAt?: Date | string | null
-    name: string
+    name?: string | null
     priority?: $Enums.Priority | null
     isCompleted?: boolean | null
   }
@@ -8120,7 +8120,7 @@ export namespace Prisma {
     id?: StringFilter<"Task"> | string
     createdAt?: DateTimeFilter<"Task"> | Date | string
     updatedAt?: DateTimeNullableFilter<"Task"> | Date | string | null
-    name?: StringFilter<"Task"> | string
+    name?: StringNullableFilter<"Task"> | string | null
     priority?: EnumPriorityNullableFilter<"Task"> | $Enums.Priority | null
     isCompleted?: BoolNullableFilter<"Task"> | boolean | null
     userId?: StringFilter<"Task"> | string
@@ -8505,7 +8505,7 @@ export namespace Prisma {
     id?: string
     createdAt?: Date | string
     updatedAt?: Date | string | null
-    name: string
+    name?: string | null
     priority?: $Enums.Priority | null
     isCompleted?: boolean | null
   }
@@ -8531,7 +8531,7 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    name?: StringFieldUpdateOperationsInput | string
+    name?: NullableStringFieldUpdateOperationsInput | string | null
     priority?: NullableEnumPriorityFieldUpdateOperationsInput | $Enums.Priority | null
     isCompleted?: NullableBoolFieldUpdateOperationsInput | boolean | null
   }
@@ -8540,7 +8540,7 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    name?: StringFieldUpdateOperationsInput | string
+    name?: NullableStringFieldUpdateOperationsInput | string | null
     priority?: NullableEnumPriorityFieldUpdateOperationsInput | $Enums.Priority | null
     isCompleted?: NullableBoolFieldUpdateOperationsInput | boolean | null
   }
@@ -8549,7 +8549,7 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    name?: StringFieldUpdateOperationsInput | string
+    name?: NullableStringFieldUpdateOperationsInput | string | null
     priority?: NullableEnumPriorityFieldUpdateOperationsInput | $Enums.Priority | null
     isCompleted?: NullableBoolFieldUpdateOperationsInput | boolean | null
   }
